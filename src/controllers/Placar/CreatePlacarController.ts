@@ -2,7 +2,6 @@ import { FastifyReply, FastifyRequest } from "fastify";
 import { PlacarProps } from "../../types/types";
 import { CreatePlacarService } from "../../services/Placar/CreatePlacarService";
 
-
 class CreatePlacarController {
   async handle(request: FastifyRequest, reply: FastifyReply) {
     let {
@@ -16,7 +15,7 @@ class CreatePlacarController {
       player2Score,
       player2Tie,
       locationName,
-      imageUrl,
+      imageBase64,
     } = request.body as PlacarProps;
 
     player1 = player1.toUpperCase();
@@ -35,7 +34,7 @@ class CreatePlacarController {
       player2Score,
       player2Tie,
       locationName,
-      imageUrl,
+      imageBase64,
     });
 
     reply.send(placar);

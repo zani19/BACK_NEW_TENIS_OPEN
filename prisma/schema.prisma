@@ -19,7 +19,8 @@ model Placar {
   player2Score    Int
   player2Tie      Int
   locationName    String
-  imageUrl        String
+  imageBase64     String
 
   @@map("placars")
 }
+

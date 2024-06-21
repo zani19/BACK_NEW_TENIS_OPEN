@@ -1,5 +1,5 @@
 import prismaClient from "../..";
-import {PlacarProps} from "../../types/types";
+import { PlacarProps } from "../../types/types";
 
 class CreatePlacarService {
   async execute({ 
@@ -13,22 +13,22 @@ class CreatePlacarService {
     player2Score,
     player2Tie,
     locationName,
-    imageUrl}: PlacarProps) {
-    
+    imageBase64 }: PlacarProps) {
+
     const placarData: any = {
-        date,
-        player1,
-        player1Category,
-        player1Score,
-        player1Tie,
-        player2,
-        player2Category,
-        player2Score,
-        player2Tie,
-        locationName,
-        imageUrl
+      date,
+      player1,
+      player1Category,
+      player1Score,
+      player1Tie,
+      player2,
+      player2Category,
+      player2Score,
+      player2Tie,
+      locationName,
+      imageBase64
     };
-    
+
     const placar = await prismaClient.placar.create({
       data: placarData,
     });

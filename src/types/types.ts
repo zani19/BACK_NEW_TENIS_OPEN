@@ -9,5 +9,5 @@ export interface PlacarProps {
     player2Score: number;
     player2Tie: number;
     locationName: string;
-    imageUrl: string | null;
+    imageBase64: string | null;
   }
