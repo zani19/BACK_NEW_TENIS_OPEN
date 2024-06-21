@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Placar {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  date            DateTime
+  player1         String
+  player1Category String
+  player1Score    Int
+  player1Tie      Int
+  player2         String
+  player2Category String
+  player2Score    Int
+  player2Tie      Int
+  locationName    String
+  imageUrl        String
+
+  @@map("placars")
+}

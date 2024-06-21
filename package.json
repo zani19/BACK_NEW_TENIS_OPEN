@@ -1,0 +1,28 @@
+{
+  "name": "back-tenis-open",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsx watch src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fastify/cors": "^9.0.1",
+    "@fastify/multipart": "^8.3.0",
+    "@prisma/client": "^5.15.1",
+    "fastify": "^4.28.0",
+    "fastify-cors": "^6.1.0",
+    "fastify-multipart": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.6",
+    "prisma": "^5.15.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.15.6",
+    "typescript": "^5.5.2"
+  }
+}
